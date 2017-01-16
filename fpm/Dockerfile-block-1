@@ -1,0 +1,9 @@
+RUN mkdir -p /etc/pydio
+COPY caddy.conf /etc/pydio/
+COPY httpd.conf /etc/pydio/
+COPY nginx.conf /etc/pydio/
+
+# ------------------------------------------------------------------------------
+# Expose ports.
+# ------------------------------------------------------------------------------
+EXPOSE 9000
