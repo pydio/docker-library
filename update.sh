@@ -93,7 +93,7 @@ for version in "${versions[@]}"; do
 			ia && ac == 1 { system("cat '$variant'/Dockerfile-block-" ab) }
 		' > "$version/$target/Dockerfile"
 
-		for f in `find $variant -name "*.conf"`; do
+		for f in `find $variant -name "*.conf" -o -name "*.sh"`; do
 			cp $f $version/$target/
 		done
 

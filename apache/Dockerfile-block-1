@@ -3,9 +3,3 @@ RUN ln -s /etc/pydio/httpd.conf /etc/apache2/sites-available/pydio.conf
 RUN a2enmod rewrite
 RUN a2dissite 000-default
 RUN a2ensite pydio
-
-# ------------------------------------------------------------------------------
-# Expose ports.
-# ------------------------------------------------------------------------------
-EXPOSE 80
-EXPOSE 443

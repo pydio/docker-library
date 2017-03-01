@@ -1,5 +1,7 @@
+COPY docker-entrypoint.sh /entrypoint.sh
+
 # ------------------------------------------------------------------------------
 # Redefine commands.
 # ------------------------------------------------------------------------------
-ENTRYPOINT [ "php", "/usr/share/pydio/cmd.php" ]
-CMD ["--help"]
+ENTRYPOINT [ "/entrypoint.sh" ]
+CMD ["pydio"]
